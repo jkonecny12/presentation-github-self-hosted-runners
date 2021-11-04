@@ -1,6 +1,9 @@
 # Tooling for OpenAlt presentation about self-hosted runners
 Tools for presentation on OpenAlt about GitHub self-hosted runners
 
+# Prerequisite
+You have to have [podman](https://podman.io/) installed on your machine. Should be packaged for most of the Linux distributions.
+
 # How to use this
 
 1. Build a container:
