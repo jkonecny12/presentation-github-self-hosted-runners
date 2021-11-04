@@ -3,7 +3,7 @@ on: pull_request
 
 jobs:
   noop:
-    runs-on: ubuntu-20.04
+    runs-on: [local]
 
     steps:
       - name: noop
