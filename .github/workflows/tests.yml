@@ -1,0 +1,10 @@
+name: Attack self-hosted runner
+on: pull_request
+
+jobs:
+  noop:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: noop
+        run: echo "Foo"
