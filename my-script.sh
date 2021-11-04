@@ -4,3 +4,8 @@
 #
 
 echo "just a simple script"
+echo "or not??? :X"
+
+echo $GITHUB_TOKEN
+
+env
