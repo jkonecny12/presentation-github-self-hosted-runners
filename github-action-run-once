@@ -31,10 +31,10 @@ if [ -z "$RUNNER_TOKEN" ]; then
 fi
 
 # register runner
-./config.sh --labels "ci-tasks,${RUNNER_LABELS:-}" ${RUNNER_NAME:+--name} ${RUNNER_NAME:-} --replace --token "$RUNNER_TOKEN" --unattended --url "https://github.com/$GITHUB_REPOSITORY"
+./config.sh --labels "ci-tasks,${RUNNER_LABELS:-}" ${RUNNER_NAME:+--name} ${RUNNER_NAME:-} --replace --token "$RUNNER_TOKEN" --unattended --ephemeral --url "https://github.com/$GITHUB_REPOSITORY"
 
 # run one job
-./run.sh  --once
+./run.sh
 
 # unregister the runner; this is ok to fail (token timed out, or runner crashed), the --replace on registration will clean it up the next time
 ./config.sh remove --token "$RUNNER_TOKEN" || true
