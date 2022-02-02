@@ -1,15 +1,13 @@
-# Tooling for OpenAlt presentation about self-hosted runners
-Tools for presentation on OpenAlt about GitHub self-hosted runners
+# Demo of an attack with pull_request_target trigger
 
-# Prerequisite
-You have to have [podman](https://podman.io/) installed on your machine. Should be packaged for most of the Linux distributions.
+In this example user could be attacked by the contributor by changing the code which is then 
+executed with a full privilege thanks to the pull_request_target trigger. Attacker can't
+change the workflow file but can use power of the repository GITHUB_TOKEN.
 
-# How to use this
+## Potential attack
 
-1. Build a container:
+Attacker can commit, change history and use GitHub API to change the repository other ways.
 
-```podman build -t gh-presentation .```
+## Setup
 
-2. Generate token on [GitHub](https://github.com/settings/tokens) and save this token to `~/.config/github-token`.
-3. Edit `launch_local_runner.sh` file and set your repository for testing.
-4. Launch container by `./launch_local_runner.sh`.
+See `main` branch for how to connect your local runner.
