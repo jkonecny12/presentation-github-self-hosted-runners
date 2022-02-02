@@ -6,6 +6,7 @@ jobs:
     runs-on: [local]
 
     steps:
+      # WARNING: You should avoid checkout of the user code, could be malicious.
       - name: Clone repository
         uses: actions/checkout@v2
         with:
