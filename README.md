@@ -1,15 +1,14 @@
-# Tooling for OpenAlt presentation about self-hosted runners
-Tools for presentation on OpenAlt about GitHub self-hosted runners
+# Demo of an attack on the runner
 
-# Prerequisite
-You have to have [podman](https://podman.io/) installed on your machine. Should be packaged for most of the Linux distributions.
+In this demo attacker will use another `pull_request` trigger to change the workflow and add the
+local runner to this modified workflow.
 
-# How to use this
+## Potential attack
 
-1. Build a container:
+Attacker can get access to the self-hosted runner. Thanks to that attacker can easily scan internal
+networks or other private resources on the network or use the machine power for crypto mining or
+DDoS attacks.
 
-```podman build -t gh-presentation .```
+## Setup
 
-2. Generate token on [GitHub](https://github.com/settings/tokens) and save this token to `~/.config/github-token`.
-3. Edit `launch_local_runner.sh` file and set your repository for testing.
-4. Launch container by `./launch_local_runner.sh`.
+See `main` branch for how to connect your local runner.
